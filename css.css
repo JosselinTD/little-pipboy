@@ -77,8 +77,22 @@ nav p{
   position: absolute;
   top: 100%;
 }
-nav .off{color:#172f18;position:relative;left:-5px;}
-.vaultboy{background:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/184191/vaultboy2.gif');background-size:77px;background-position:2px;width:80px;height:100px;position:absolute;left:110px;top:56px;}
+nav .off{
+  color:#172f18;
+  position:relative;
+  left:-5px;
+}
+.vaultboy{
+  background:url('img/vaultboy2.gif');
+  background-size:contain;
+  background-position:2px;
+  width:40vh;
+  height:50vh;
+  position:absolute;
+  top: 25vh;
+  left:50%;
+  transform: translate(-50%, 0%);
+}
 .bar1,.bar2,.bar3,.bar4,.bar5,.bar6{width:15px;height:3.5px;background:#64d515;position:absolute;}
 .bar1{left:32px;top:-8px;}
 .bar2{left:32px;bottom:-8px;background:none;border:1px solid #64d515;height:1.5px;}.bar2:after{content:"";display:block;height:1.5px;width:7.6px;background:#64d515;}
