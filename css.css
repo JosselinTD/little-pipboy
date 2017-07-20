@@ -3,12 +3,32 @@
 ::selection{background:lightgreen;}
 body{background:#111;font-family:'Droid Sans',sans-serif;font-size:7pt;color:#d8c99e;font-weight:700;text-transform:uppercase;margin:auto;}
 
-.stat:before{content:"Stat";}.inv:before{content:"Inv";}.data:before{content:"Data";}.map:before{content:"Map";}.radio:before{content:"Radio"}.status:before{content:"Status";}.special:before{content:"Special";}
-
 .screen{width:300px;height:235px;position:absolute;margin-left:26px;border-radius:20px;background:#000;border:5px solid #333;padding:5px 5px 5px 0;;overflow:hidden;}
 
-.screen-reflection{width:285px;height:185px;background:linear-gradient(150deg,#fff,rgba(0,0,0,0));position:relative;z-index:99;opacity:0.07;margin:9px 10px 10px 10px;border-radius:10px;}
-.scan{width:305px;height:80px;background:linear-gradient(rgba(0,0,0,0),#7ff12a);position:absolute;animation:scan;animation-duration:4s;animation-iteration-count: infinite;top:-85px;z-index:99;opacity:0.25;}
+.screen-reflection{
+  width:285px;
+  height:185px;
+  background:linear-gradient(150deg,#fff,rgba(0,0,0,0));
+  position:relative;
+  z-index:99;
+  opacity:0.07;
+  margin:9px 10px 10px 10px;
+  border-radius:10px;
+  pointer-events: none;
+}
+.scan{
+  width:305px;
+  height:80px;
+  background:linear-gradient(rgba(0,0,0,0),#7ff12a);
+  position:absolute;
+  animation:scan;
+  animation-duration:4s;
+  animation-iteration-count: infinite;
+  top:-85px;
+  z-index:99;
+  opacity:0.25;
+  pointer-events: none;
+}
 nav{height:25px;width:90%;position:absolute;top:0;left:0;border-bottom:1px solid #8df776;padding-left:10%;border-top-right-radius:20px;z-index:95;border-top-left-radius:20px;}
 nav span{color:#8df776;line-height:31px;font-size:9pt;letter-spacing:0.3px;margin-left:14px;font-weight:300;}
 nav .active{background:#000;border-right:1px solid #8df776;border-left:1px solid #8df776;border-bottom:1px solid #000;border-top-left-radius:5px;border-top-right-radius:5px;padding:3px 6px 3px 6px;}
@@ -61,4 +81,12 @@ nav .off{color:#172f18;position:relative;left:-5px;}
   0{top:-80px;}
   70%{top:300px;}
   100%{top:300px;}
+}
+
+.show {
+  display: none;
+}
+
+body.stat .show.stat {
+  display: block;
 }
