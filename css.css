@@ -1,7 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans);
 ::-moz-selection{background:lightgreen;}
 ::selection{background:lightgreen;}
-body{background:#111;font-family:'Droid Sans',sans-serif;font-size:7pt;color:#d8c99e;font-weight:700;text-transform:uppercase;margin:auto;}
+body{
+  background:#111;
+  font-family:'Droid Sans',sans-serif;
+  font-size:7pt;
+  color:#8df776;
+  font-weight:700;
+  text-transform:uppercase;
+  margin:auto;
+}
 
 .screen{
   width:120vh;
@@ -82,17 +90,6 @@ nav .off{
   position:relative;
   left:-5px;
 }
-.vaultboy{
-  background:url('img/vaultboy2.gif');
-  background-size:contain;
-  background-position:2px;
-  width:40vh;
-  height:50vh;
-  position:absolute;
-  top: 25vh;
-  left:50%;
-  transform: translate(-50%, 0%);
-}
 .bar1,.bar2,.bar3,.bar4,.bar5,.bar6{width:15px;height:3.5px;background:#64d515;position:absolute;}
 .bar1{left:32px;top:-8px;}
 .bar2{left:32px;bottom:-8px;background:none;border:1px solid #64d515;height:1.5px;}.bar2:after{content:"";display:block;height:1.5px;width:7.6px;background:#64d515;}
@@ -147,4 +144,30 @@ nav .off{
 
 body.stat .show.stat {
   display: block;
+}
+
+.show.stat.content {
+  width: 100%;
+  position: absolute;
+  top: 12vh;
+  height: 88vh;
+}
+.vaultboy{
+  background:url('img/vaultboy2.gif');
+  background-size:contain;
+  background-position:2px;
+  width:55vh;
+  height:70vh;
+  position:absolute;
+  top: 12vh;
+  right: 0px;
+  background-repeat: no-repeat;
+}
+.show.stat.content .values {
+  font-size: 6vh;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  line-height: 10vh;
 }
