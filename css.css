@@ -171,3 +171,11 @@ body.stat .show.stat {
   transform: translate(0%, -50%);
   line-height: 10vh;
 }
+.reverse {
+  transform: scale(-1, 1);
+  display: inline-block;
+}
+.big-arrow {
+  font-size: 2em;
+  vertical-align: middle;
+}

@@ -1,6 +1,9 @@
 var navPath = 'nav .main span';
 
-var model = JSON.parse(localStorage.getItem('model')) || {};
+var model = JSON.parse(localStorage.getItem('model')) || {
+	karma: 0,
+	pv: 0
+};
 
 $(function() {
 	$('body').on('click', navPath, function() {
@@ -18,6 +21,21 @@ $(function() {
 			model[attrName] = newValue;
 			updateModel();
 		}
+	});
+
+	$('body').on('click', '[data-less]', function() {
+		var attrName = $(this).data('less');
+		var newValue = parseInt((model[attrName] || 0)) - 1;
+		model[attrName] = newValue;
+
+		updateModel();
+	});
+	$('body').on('click', '[data-more]', function() {
+		var attrName = $(this).data('more');
+		var newValue = parseInt((model[attrName] || 0)) + 1;
+		model[attrName] = newValue;
+
+		updateModel();
 	});
 
 	updateModel();
