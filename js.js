@@ -1,10 +1,10 @@
-$(function() {
+var navPath = 'nav .main span';
 
-	$('body').on('click', 'nav > span', function() {
-		$('nav > span').removeClass('active');
+$(function() {
+	$('body').on('click', navPath, function() {
+		$(navPath).removeClass('active');
 		$(this).addClass('active');
 
 		$('body').attr('class', $(this).attr('class'));
 	});
-
 });
