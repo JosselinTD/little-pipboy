@@ -2,9 +2,10 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css.css"/>
   <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="js.js"></script>
+  <script type="text/javascript" src="app/routing.js"></script>
+  <script type="text/javascript" src="app/model.js"></script>
 </head>
-<body class="stat">
+<body>
   <div class="pip">
     <div class="pipfront">
       <div class="screen-border">
@@ -13,18 +14,18 @@
           <div class="scan"></div>
           <nav>
             <div class="main">
-              <span class="active stat">Stat</span>
-              <span class="inv">Inv</span>
-              <span class="data">Data</span>
-              <span class="map">Map</span>
-              <span class="radio">Radio</span>
+              <span data-nav="infos" data-current-nav>Infos</span>
+              <span data-nav="cmp">Comp</span>
+              <span data-nav="data">Regles</span>
+              <span data-nav="map">Map</span>
+              <span data-nav="radio">Radio</span>
             </div>
-            <p class="show stat nav">
-              <span class="status">Status</span>
-              <span class="off special">Special</span>
+            <p class="show infos nav">
+              <span class="status" data-nav="infos">Infos</span>
+              <span class="off special" data-nav="infos special">Special</span>
             </p>
           </nav>
-          <div class="show stat content">
+          <div class="show infos content">
             <div class="vaultboy"></div>
 
             <div class="values">

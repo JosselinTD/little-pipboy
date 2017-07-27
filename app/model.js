@@ -1,18 +1,12 @@
-var navPath = 'nav .main span';
-
+// Init model with previous values or default one
 var model = JSON.parse(localStorage.getItem('model')) || {
-	karma: 0,
-	pv: 0
+	karma: '0',
+	pv: '0'
 };
 
+// Available actions on model
 $(function() {
-	$('body').on('click', navPath, function() {
-		$(navPath).removeClass('active');
-		$(this).addClass('active');
-
-		$('body').attr('class', $(this).attr('class'));
-	});
-
+	// Show the javascript prompt to enter a value
 	$('body').on('click', '[data-prompt]', function() {
 		var attrName = $(this).data('prompt');
 		var newValue = prompt('Quelle est la valeur de ' + attrName + ' ?', model[attrName] || '');
@@ -23,6 +17,7 @@ $(function() {
 		}
 	});
 
+	// A click increment or decrement a value
 	$('body').on('click', '[data-less]', function() {
 		var attrName = $(this).data('less');
 		var newValue = parseInt((model[attrName] || 0)) - 1;
@@ -38,9 +33,11 @@ $(function() {
 		updateModel();
 	});
 
+	// After page loading, we load the model
 	updateModel();
 });
 
+// Model save and view refresh
 function updateModel() {
 	localStorage.setItem('model', JSON.stringify(model));
 	Object.keys(model).forEach(function(attrName) {

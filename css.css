@@ -71,7 +71,7 @@ nav .main {
   position: absolute;
   bottom: 0;
 }
-nav .active{
+nav div [data-current-nav]{
   background:#000;
   border-right:1px solid #8df776;
   border-left:1px solid #8df776;
@@ -142,11 +142,11 @@ nav .off{
   display: none;
 }
 
-body.stat .show.stat {
+body.infos .show.infos {
   display: block;
 }
 
-.show.stat.content {
+.show.infos.content {
   width: 100%;
   position: absolute;
   top: 12vh;
@@ -163,7 +163,7 @@ body.stat .show.stat {
   right: 0px;
   background-repeat: no-repeat;
 }
-.show.stat.content .values {
+.show.infos.content .values {
   font-size: 6vh;
   position: absolute;
   left: 10%;
