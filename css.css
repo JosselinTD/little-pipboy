@@ -145,23 +145,32 @@ nav .off{
 body.infos .show.infos {
   display: block;
 }
+body.cmp .show.cmp {
+  display: block;
+}
+body.add .show.add {
+  display: block;
+}
 
-.show.infos.content {
+.show.infos.content, .show.add.content, .show.cmp.content {
   width: 100%;
   position: absolute;
   top: 12vh;
   height: 88vh;
-}
-.vaultboy{
-  background:url('img/vaultboy2.gif');
-  background-size:contain;
-  background-position:2px;
-  width:55vh;
-  height:70vh;
-  position:absolute;
-  top: 12vh;
-  right: 0px;
+  background-image:url('img/vaultboy2.gif');
+  background-size:auto 70vh;
   background-repeat: no-repeat;
+  background-position:right;
+  background-repeat: no-repeat;
+}
+.show.cmp.content {
+  background-image:url('img/comps.gif');
+  background-size:auto 80vh;
+}
+
+.show.add.content {
+  background-image:url('img/adds.gif');
+  background-size:auto 75vh;
 }
 .show.infos.content .values {
   font-size: 6vh;
