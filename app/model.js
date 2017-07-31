@@ -4,7 +4,8 @@ var model = Object.assign({
 	pv: '0',
 	skills: [],
 	addictions: [],
-	inventory: []
+	inventory: [],
+	contacts: []
 }, JSON.parse(localStorage.getItem('model')));
 
 // Available actions on model
@@ -162,5 +163,23 @@ function addInventory() {
 	model.inventory.push({
 		nom: inventoryName,
 		value: 0
+	});
+}
+
+function addContact() {
+	var contactName = prompt('Quel est le nom du contact ?');
+	var contactJob = prompt('Quel est son job ?');
+
+	if(!contactName) {
+		return;
+	}
+
+	if (!contactJob) {
+		return;
+	}
+
+	model.contacts.push({
+		nom: contactName,
+		job: contactJob
 	});
 }

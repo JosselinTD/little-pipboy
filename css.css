@@ -62,7 +62,6 @@ nav span{
   color:#8df776;
   font-size:5vh;
   letter-spacing:3px;
-  margin-left:5vh;
   font-weight:300;
   cursor: pointer;
   padding:3px 6px 0px 6px;
@@ -156,8 +155,15 @@ body.add .show.add {
 body.inv .show.inv {
   display: block;
 }
+body.contact .show.contact {
+  display: block;
+}
 
-.show.infos.content, .show.add.content, .show.cmp.content, .show.inv.content {
+.show.infos.content,
+.show.add.content,
+.show.cmp.content,
+.show.inv.content,
+.show.contact.content {
   width: 100%;
   position: absolute;
   top: 12vh;
@@ -180,10 +186,14 @@ body.inv .show.inv {
 .show.inv.content {
   background-image:url('img/inv.gif');
 }
+.show.contact.content {
+  background-image:url('img/contact.gif');
+}
 .show.infos.content .values,
 .show.cmp.content .values,
 .show.add.content .values,
-.show.inv.content .values {
+.show.inv.content .values,
+.show.contact.content .values {
   font-size: 6vh;
   position: absolute;
   left: 10%;
@@ -191,7 +201,9 @@ body.inv .show.inv {
   transform: translate(0%, -50%);
   line-height: 10vh;
 }
-.show.cmp.content .values, .show.inv.content .values {
+.show.cmp.content .values,
+.show.inv.content .values,
+.show.contact.content .values {
   font-size: 5vh;
   line-height: 7vh;
 }

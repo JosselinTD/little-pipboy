@@ -25,6 +25,7 @@
               <span data-nav="cmp">Comp</span>
               <span data-nav="add">Add</span>
               <span data-nav="inv">Inv</span>
+              <span data-nav="contact">Contact</span>
             </div>
           </nav>
           <div class="show infos content">
@@ -97,26 +98,20 @@
               <div class="button" data-fn="addInventory">Ajouter un objet</div>
             </div>
           </div>
-            <!--
-            <div class="supplies">
-              <span>Stimpak (0)</span>
-              <span>Radaway (0)</span>
-              <span>Stix</span>
+          <div class="show contact content">
+            <div class="vaultboy contact"></div>
+
+            <div class="values">
+              <ul>
+                <li data-list="contacts" data-template>
+                  <span data-prompt="contacts$nom" data-html="contacts$nom"></span> :
+                  <span class="value" data-html="contacts$job"></span>
+                  <span data-delete="contacts$">&#10006;</span>
+                </li>
+              </ul>
+              <div class="button" data-fn="addContact">Ajouter un contact</div>
             </div>
-            <div class="info-bar">
-              <span class="weapon"></span>
-              <span class="aim"><p>21</p></span>
-              <span class="helmet"></span>
-              <span class="shield"><p>110</p></span>
-              <span class="voltage"><p>126</p></span>
-              <span class="nuclear"><p>35</p></span>
-            </div>
-            <div class="hud-bar">
-              <div class="hp"></div>
-              <div class="exp"></div>
-              <div class="ap"></div>
-            </div>
-            -->
+          </div>
         </div>
       </div>
   </div>
@@ -138,6 +133,7 @@
       'img/adds.gif',
       'img/comps.gif',
       'img/inv.gif',
+      'img/contact.gif',
       'img/vaultboy2.gif'
     ]
   });
