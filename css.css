@@ -202,3 +202,12 @@ ul {
   padding: 0;
 
 }
+
+.fullscreen-icon {
+  position: absolute;
+  z-index: 1000;
+  bottom: 5vh;
+  left: 117vh;
+  width: 5vh;
+  opacity: 0.5;
+}
