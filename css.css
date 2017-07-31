@@ -172,13 +172,17 @@ body.add .show.add {
   background-image:url('img/adds.gif');
   background-size:auto 75vh;
 }
-.show.infos.content .values {
+.show.infos.content .values, .show.cmp.content .values, .show.add.content .values {
   font-size: 6vh;
   position: absolute;
   left: 10%;
   top: 50%;
   transform: translate(0%, -50%);
   line-height: 10vh;
+}
+.show.cmp.content .values {
+  font-size: 5vh;
+  line-height: 7vh;
 }
 .reverse {
   transform: scale(-1, 1);
@@ -191,4 +195,10 @@ body.add .show.add {
 
 [data-template] {
   display: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+
 }
