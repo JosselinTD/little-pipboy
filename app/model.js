@@ -3,7 +3,8 @@ var model = Object.assign({
 	karma: '0',
 	pv: '0',
 	skills: [],
-	addictions: []
+	addictions: [],
+	inventory: []
 }, JSON.parse(localStorage.getItem('model')));
 
 // Available actions on model
@@ -147,6 +148,19 @@ function addAddiction() {
 
 	model.addictions.push({
 		nom: addictionName,
+		value: 0
+	});
+}
+
+function addInventory() {
+	var inventoryName = prompt('Quel est le nom de l\'objet ?');
+
+	if(!inventoryName) {
+		return;
+	}
+
+	model.inventory.push({
+		nom: inventoryName,
 		value: 0
 	});
 }

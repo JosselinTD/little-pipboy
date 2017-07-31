@@ -49,12 +49,11 @@ body{
 }
 nav{
   height:12vh;
-  width:90%;
+  width:100%;
   position:absolute;
   top:0;
   left:0;
   border-bottom:1px solid #8df776;
-  padding-left:10%;
   border-top-right-radius:20px;
   z-index:95;
   border-top-left-radius:20px;
@@ -66,10 +65,14 @@ nav span{
   margin-left:5vh;
   font-weight:300;
   cursor: pointer;
+  padding:3px 6px 0px 6px;
 }
 nav .main {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 nav div [data-current-nav]{
   background:#000;
@@ -78,7 +81,6 @@ nav div [data-current-nav]{
   border-bottom:1px solid #000;
   border-top-left-radius:5px;
   border-top-right-radius:5px;
-  padding:3px 6px 0px 6px;
 }
 nav p{
   height:25px;
@@ -151,8 +153,11 @@ body.cmp .show.cmp {
 body.add .show.add {
   display: block;
 }
+body.inv .show.inv {
+  display: block;
+}
 
-.show.infos.content, .show.add.content, .show.cmp.content {
+.show.infos.content, .show.add.content, .show.cmp.content, .show.inv.content {
   width: 100%;
   position: absolute;
   top: 12vh;
@@ -172,7 +177,13 @@ body.add .show.add {
   background-image:url('img/adds.gif');
   background-size:auto 75vh;
 }
-.show.infos.content .values, .show.cmp.content .values, .show.add.content .values {
+.show.inv.content {
+  background-image:url('img/inv.gif');
+}
+.show.infos.content .values,
+.show.cmp.content .values,
+.show.add.content .values,
+.show.inv.content .values {
   font-size: 6vh;
   position: absolute;
   left: 10%;
@@ -180,7 +191,7 @@ body.add .show.add {
   transform: translate(0%, -50%);
   line-height: 10vh;
 }
-.show.cmp.content .values {
+.show.cmp.content .values, .show.inv.content .values {
   font-size: 5vh;
   line-height: 7vh;
 }
