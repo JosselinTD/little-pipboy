@@ -48,7 +48,7 @@
 
             <div class="values">
               <ul>
-                <li data-list="skills">
+                <li data-list="skills" data-template>
                   <span data-prompt="skills$nom" data-html="skills$nom"></span> :
                   <span class="reverse big-arrow" data-less="skills$value">&#8227;</span>
                   <span class="value" data-html="skills$value"></span>
@@ -63,6 +63,16 @@
             <div class="vaultboy adds"></div>
 
             <div class="values">
+              <ul>
+                <li data-list="addictions" data-template>
+                  <span data-prompt="addictions$nom" data-html="addictions$nom"></span> :
+                  <span class="reverse big-arrow" data-less="addictions$value">&#8227;</span>
+                  <span class="value" data-html="addictions$value"></span>
+                  <span class="big-arrow" data-more="addictions$value">&#8227;</span>
+                  <span data-delete="addictions$">&#10006;</span>
+                </li>
+              </ul>
+              <div class="button" data-fn="addAddiction">Ajouter une addiction</div>
             </div>
           </div>
             <!--

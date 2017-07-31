@@ -2,7 +2,8 @@
 var model = Object.assign({
 	karma: '0',
 	pv: '0',
-	skills: []
+	skills: [],
+	addictions: []
 }, JSON.parse(localStorage.getItem('model')));
 
 // Available actions on model
@@ -107,18 +108,19 @@ function updateModel() {
 		if (!Array.isArray(value)) {
 			$('[data-html=' + attrName + ']').html(value);
 		} else {
-			var template = $('[data-list=' + attrName + ']').first();
+			var template = $('[data-list=' + attrName + '][data-template]').last();
 			var templateContainer = template.parent();
-			template.remove();
 			templateContainer.empty();
 			value.forEach(function(el) {
 				var templateApplied = template.clone();
+				templateApplied.removeAttr('data-template');
 				Object.keys(el).forEach(function(subAttrName) {
 					var subValue = el[subAttrName];
 					templateApplied.find('[data-html="' + attrName + '$' + subAttrName + '"]').html(subValue);
 				});
 				templateApplied.appendTo(templateContainer);
 			});
+			template.appendTo(templateContainer);
 		}
 	});
 }
@@ -132,6 +134,19 @@ function addSkill() {
 
 	model.skills.push({
 		nom: skillName,
+		value: 0
+	});
+}
+
+function addAddiction() {
+	var addictionName = prompt('Quel est le nom de l\'addiction ?');
+
+	if(!addictionName) {
+		return;
+	}
+
+	model.addictions.push({
+		nom: addictionName,
 		value: 0
 	});
 }

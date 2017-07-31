@@ -188,3 +188,7 @@ body.add .show.add {
   font-size: 2em;
   vertical-align: middle;
 }
+
+[data-template] {
+  display: none;
+}
