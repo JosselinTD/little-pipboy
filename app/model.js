@@ -2,6 +2,7 @@
 var model = Object.assign({
 	karma: '0',
 	pv: '0',
+	bagarre: '0',
 	skills: [],
 	addictions: [],
 	inventory: [],
