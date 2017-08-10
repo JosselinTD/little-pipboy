@@ -234,3 +234,13 @@ ul {
   width: 5vh;
   opacity: 0.5;
 }
+
+#time {
+  position: absolute;
+  z-index: 1000;
+  bottom: 4vh;
+  left: 100vh;
+  width: 5vh;
+  opacity: 0.5;
+  font-size: 5vh;
+}
